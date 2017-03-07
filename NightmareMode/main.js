@@ -239,7 +239,6 @@ var cCYOA = (function () {
 
         inpBg.style.cssText = ("position: absolute; height:100%; width: 100%; top: 0px; left: 0px; background-color: #000; opacity: 0.8;");
     
-
         var inpInp = document.createElement('input'); 
 
         inpInp.id = "cInpInp";
@@ -251,7 +250,6 @@ var cCYOA = (function () {
         inpInp.style.cssText = ("position: absolute; height: 40px; width: 200px; top: 200px; left: 280px; background-color: #666;");
     
         inpInp.focus();
-        //inpInp.innerHTML = c;
 
         var inpInst = document.createElement('div'); 
 
@@ -259,7 +257,7 @@ var cCYOA = (function () {
 
         inpStage.appendChild(inpInst);
 
-        inpInst.style.cssText = ("position: absolute; padding-top: 20px; height: 110px; width: 500px; top: 50px; left: 120px; color: #FFF; background-color: #C77314; text-align: center; border: 2px solid #FFF;");
+        inpInst.style.cssText = ("position: absolute; padding-top: 20px; height: 110px; width: 500px; top: 50px; left: 120px; color: #000; background-color: #2885A1; text-align: center; border: 2px solid #FFF;");
     
         inpInst.innerHTML = c;
 
@@ -308,10 +306,7 @@ var cCYOA = (function () {
 
     var _addScript = function (c) {
 
-      var cSplit = c;
-      
-      cSplit = cSplit.split("|")
-
+    
       var scrpt1 = document.getElementById('cStoryScript1');
 
       var scrpt2 = document.getElementById('cStoryScript2');
@@ -332,8 +327,12 @@ var cCYOA = (function () {
 
       scrpt3.innerHTML = scrpt4.innerHTML;
 
+      var cSplit = c;
+      
+      cSplit = cSplit.split("|")
 
-      if (cSplit[0] === "t") {
+
+        if (cSplit[0] === "t") {
         
           scrpt4.style.color = "#189FCC"
 
@@ -374,7 +373,6 @@ var cCYOA = (function () {
           scriptCnt += 1;
 
         }
-
     };
 
       
@@ -383,7 +381,6 @@ var cCYOA = (function () {
       startUp: function () {
        
         _keySwtch(1); // Should have put this in public. 
-
       }
         
         
