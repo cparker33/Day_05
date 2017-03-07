@@ -20,19 +20,12 @@ var cCYOA = (function () {
 
           _Prompt("Enter your name.")
 
-          
           document.getElementById("cInpInp").onkeyup = function () {
 
           cUser = document.getElementById("cInpInp").value; 
 
-
-
           }
-
-
-
         },
-
         function () { 
 
           var tStrng = "t|" + cUser + "... My name is " + cUser;
@@ -48,7 +41,6 @@ var cCYOA = (function () {
 
           _Prompt("Choose:<br>(1) Try to repair helemt.<br>(2) Wait and see what happens.")
 
-          
           document.getElementById("cInpInp").onkeyup = function (e) {
 
             if (e.keyCode == 49) { 
@@ -77,9 +69,6 @@ var cCYOA = (function () {
 
             }
           }
-
-          
-
         },
         "s|You pull the repair kit from your EVA and begin repairing the crack.",
         "s|Your helmet hisses and whistle as the leak seals.",
@@ -90,7 +79,6 @@ var cCYOA = (function () {
           _keySwtch(0);
 
           _Prompt("Choose:<br>(1) Search area.<br>(2) Try and return to Mars Landing Habitat(HAB).")
-
           
           document.getElementById("cInpInp").onkeyup = function (e) {
 
@@ -101,7 +89,6 @@ var cCYOA = (function () {
               _keySwtch(1);
 
               scriptCnt += 1;
-
 
               _addScript(stryList[scriptCnt])
 
@@ -117,9 +104,6 @@ var cCYOA = (function () {
 
             }
           }
-
-          
-
         },
         "w|You look around for any supplies and trip!",
         function () { 
@@ -175,8 +159,6 @@ var cCYOA = (function () {
 
             }
           }
-
-        
         },
         "g|You made it to saftey!! Chicken Dinner!" // 19
         ];
@@ -187,7 +169,7 @@ var cCYOA = (function () {
 
         if (c === 1) {
 
-        document.getElementById("cInst").innerHTML = ("Press C to [C]ontinue");
+          document.getElementById("cInst").innerHTML = ("Press C to [C]ontinue");
 
           document.body.onkeyup = function (e) {
 
@@ -217,10 +199,7 @@ var cCYOA = (function () {
 
               _keySwtch(1);
 
-              scriptCnt +=1
-
-                // alert(scriptCnt)
-                // alert(stryList[scriptCnt]);
+              scriptCnt += 1;
 
               stryList[scriptCnt]();           
               
@@ -250,66 +229,64 @@ var cCYOA = (function () {
 
       var _Prompt = function (c) {
 
-      var inpStage = document.getElementById("cInpSec");
+        var inpStage = document.getElementById("cInpSec");
 
-      var inpBg = document.createElement('div'); 
+        var inpBg = document.createElement('div'); 
 
-      inpBg.id = "cInpBG";
+        inpBg.id = "cInpBG";
 
-      inpStage.appendChild(inpBg);
+        inpStage.appendChild(inpBg);
 
-      inpBg.style.cssText = ("position: absolute; height:100%; width: 100%; top: 0px; left: 0px; background-color: #000; opacity: 0.8;");
-  
+        inpBg.style.cssText = ("position: absolute; height:100%; width: 100%; top: 0px; left: 0px; background-color: #000; opacity: 0.8;");
+    
 
-      var inpInp = document.createElement('input'); 
+        var inpInp = document.createElement('input'); 
 
-      inpInp.id = "cInpInp";
+        inpInp.id = "cInpInp";
 
-      inpInp.type = "text";
+        inpInp.type = "text";
 
-      inpStage.appendChild(inpInp);
+        inpStage.appendChild(inpInp);
 
-      inpInp.style.cssText = ("position: absolute; height: 40px; width: 200px; top: 200px; left: 280px; background-color: #666;");
-  
-      inpInp.focus();
-      //inpInp.innerHTML = c;
+        inpInp.style.cssText = ("position: absolute; height: 40px; width: 200px; top: 200px; left: 280px; background-color: #666;");
+    
+        inpInp.focus();
+        //inpInp.innerHTML = c;
 
-      var inpInst = document.createElement('div'); 
+        var inpInst = document.createElement('div'); 
 
-      inpInst.id = "cInpInst";
+        inpInst.id = "cInpInst";
 
-      inpStage.appendChild(inpInst);
+        inpStage.appendChild(inpInst);
 
-      inpInst.style.cssText = ("position: absolute; padding-top: 20px; height: 110px; width: 500px; top: 50px; left: 120px; color: #FFF; background-color: #C77314; text-align: center; border: 2px solid #FFF;");
-  
-      inpInst.innerHTML = c;
+        inpInst.style.cssText = ("position: absolute; padding-top: 20px; height: 110px; width: 500px; top: 50px; left: 120px; color: #FFF; background-color: #C77314; text-align: center; border: 2px solid #FFF;");
+    
+        inpInst.innerHTML = c;
 
-    }
+      }
  
 
     var _endGame = function (c) {
 
-    document.getElementById("cInst").innerHTML = ("[Press [R] to Try Again");
+      document.getElementById("cInst").innerHTML = ("[Press [R] to Try Again");
 
-    document.body.onkeyup = function (e) {
+      document.body.onkeyup = function (e) {
 
-      if (e.keyCode == 82) {
+        if (e.keyCode == 82) {
       
-        window.location.reload()
+          window.location.reload()
       
-      }
+        }
 
-     };
+      };
 
-     var scrpt1 = document.getElementById('cStoryScript1');
+      var scrpt1 = document.getElementById('cStoryScript1');
 
       var scrpt2 = document.getElementById('cStoryScript2');
 
       var scrpt3 = document.getElementById('cStoryScript3');
 
-      var scrpt4 = document.getElementById('cStoryScript4'); 
-
-     
+      var scrpt4 = document.getElementById('cStoryScript4');
 
       scrpt1.innerHTML = ""
 
@@ -320,9 +297,6 @@ var cCYOA = (function () {
       scrpt4.style.fontSize = ("45px")
 
       scrpt4.style.paddingTop = ("30px")
-
-      // scrpt4.style.color = ("#7D1515")
-
 
     }
 
@@ -406,17 +380,9 @@ var cCYOA = (function () {
       
     return {
           
-      calebIsAwesome: function (c) {
-        // note ...
-      },
-        
       startUp: function () {
-        
-        // var insrStage = document.getElementById("cInpSec");
-
-        
-
-        _keySwtch(1);
+       
+        _keySwtch(1); // Should have put this in public. 
 
       }
         
